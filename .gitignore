@@ -1,0 +1,48 @@
+# Dependency directories
+node_modules
+**/node_modules
+
+# Yarn and NPM logs
+yarn-error.log
+npm-debug.log
+*.lock
+
+# Next.js build and output directories
+apps/web/.next
+apps/web/.turbo
+apps/web/.vercel
+apps/web/out
+
+# Directus uploads, if any
+apps/directus/uploads
+
+# Environment variables
+.env
+.env.*   # If you have env variants like .env.production, etc.
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Coverage reports
+coverage
+**/coverage
+
+# Dist and build artifacts (if any)
+dist
+build
+
+# Docker related
+docker-compose.override.yml
+
+# Editor or IDE files
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.swo

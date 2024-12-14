@@ -1,0 +1,21 @@
+{
+  "name": "ammamas-kitchen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "divy-koushik <dk@adizen.ai>",
+  "license": "MIT",
+  "private": true,
+
+    "scripts": {
+      "dev:web": "yarn workspace @ammamas-kitchen/web dev",
+      "dev:directus": "yarn workspace @ammamas-kitchen/directus start",
+      "dev": "concurrently \"yarn dev:web\" \"yarn dev:directus\""
+    },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

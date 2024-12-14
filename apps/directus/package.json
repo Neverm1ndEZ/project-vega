@@ -1,0 +1,14 @@
+{
+ "name": "@ammamas-kitchen/directus",
+  "private": true,
+  "scripts": {
+    "start": "directus start",
+    "migrate": "directus schema apply"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "directus": "^11.3.2"
+  }
+}

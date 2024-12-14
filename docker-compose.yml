@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  web:
+    build: ./apps/web
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    
+  directus:
+    build: ./apps/directus
+    ports:
+      - "8055:8055"
+    environment:
+      DIRECTUS_AUTH_SECRET: "your-secret-key"
+      DB_CLIENT: "pg"
+      DB_HOST: "db"
+      DB_DATABASE: "ammamas_db"
+      DB_USER: "ammamas_user"
+      DB_PASSWORD: "ammamas_password"
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: ammamas_user
+      POSTGRES_PASSWORD: ammamas_password
+      POSTGRES_DB: ammamas_db
+    ports:
+      - "5432:5432"
